@@ -1,0 +1,14 @@
+---
+title: "Author"
+author: "Mohamed Mahmoud"
+date: "February 22, 2018"
+output: html_document
+---
+#### I am a Senior Transportation Modeler at [Translink](https://www.translink.ca/), the statutory authority responsible for the regional transportation network of Metro Vancouver in British Columbia, Canada. My work is mostly in the area of travel demand modeling and forecasting, or simply transportation data science. I spend most of my time on the processes of data collection/acquisition, cleaning/wrangling, and visualization before I actually get to the part where I build predictive models. 
+
+
+#### When I am not at the office (or working on a side project), I am either spending time with my lovely family or playing soccer. I also love travelling and exploring new places and cultures. 
+
+
+#### I would love to hear your feedback and suggestions! You can contact me by [email](mahmoud.mohsalah@gmail.com) or through [LinkedIn](http://linkedin.com/in/moh-salah).
+

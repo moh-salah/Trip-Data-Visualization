@@ -1,0 +1,13 @@
+---
+title: "Description"
+author: "Mohamed Mahmoud"
+date: "February 22, 2018"
+output: html_document
+---
+#### This app visualizes reported trips made by individuals who participate in trip diary surveys. The data used for this demo is **simulated** and does not represent actual individuals or trips. The motivation behind developing this tool is to facilitate the data cleaning process of reviewing individuals' trips. Often this process is done by running queries against the data to 'flag' trips that should be reviewed. This app provides a simple way to visually review trips using an interactive map instead of doing so in a tabular format.  
+
+
+#### The structure of the data and the header names have to match the enclosed sample dataset `fake_data.txt`. Trip routes are generated using Google Maps directions API which is accessed through the [googleway](https://cran.r-project.org/web/packages/googleway/vignettes/googleway-vignette.html) package. Users should set the variable `my_key` to their own Google API keys. At the time of developing this app (Feb 2018), only the `driving` and `walking` modes were supported by the `googleway` package. The 'walking' mode can take any of the following values: `Walk`, `walking`, or `on foot`. There are no requirements on the naming of the other modes, however, the `driving` mode will be used for any mode that is not `walking`.
+
+
+#### I built this app using the [Shiny](http://shiny.rstudio.com/) framework in [R](https://www.r-project.org/) – which is a great way to make data-focused web apps straight from R! The maps and tables are produced using [Leaflet](https://rstudio.github.io/leaflet/) and [DT](https://rstudio.github.io/DT/) packages.
