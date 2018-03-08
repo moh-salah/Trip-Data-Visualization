@@ -48,11 +48,11 @@ ui <- dashboardPage(
     tabItems(
     tabItem(tabName = "main_tab",
       fluidRow(
+      tags$div(tags$style(HTML( ".selectize-dropdown, .selectize-dropdown.form-control{z-index:10000;}"))), #to show dropdown menu in front of the map
       box(title = 'Select/Enter Person ID:', status = 'primary', solidHeader = TRUE,
-        selectizeInput(
+        selectInput(
           inputId ='person_id'
           ,label =''
-          ,options = list(dropdownParent = 'body') #to show dropdown menu in front of the map
           ,choices = df$person_id
           ,selected= 1
         )
