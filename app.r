@@ -25,8 +25,9 @@ df <- fread("fake_data.txt",na.strings=c("","NA"))
 #count number of days for each person
 df <- ddply(df,.(person_id),transform, days = length(unique(day_number)))
 #define mode for googleway input
-#currenty the 'googleway' package only supports 'walking' and 'driving' modes
-df$g_mode <- ifelse(df$mode %in% c('Walk', 'walking', 'on foot'), 'walking', 'driving')
+df$g_mode <- ifelse(df$mode %in% c('Walk', 'Walking', 'On foot'), 'walking',
+                    ifelse(df$mode %in% c('Bus', 'Train', 'Transit'), 'transit',
+                                          ifelse(df$mode %in% c('Bike', 'Biking', 'Bicycling'), 'bicycling', 'driving')))
 #define list of person ids and the number of travel days
 #this is used later to define the conditional selection of days
 pers_days <- unique(df[c("person_id", "days")])
